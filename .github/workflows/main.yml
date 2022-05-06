@@ -1,0 +1,16 @@
+name: Test Github Action
+
+on:
+  # Run manually
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout code
+      - uses: actions/checkout@v3
+
+      - name: Dumb action
+        run: cat README.md
